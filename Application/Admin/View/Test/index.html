@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>OSS web直传</title>
+		<!--<link href="__ROOT__/Public/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="__ROOT__/Public/bootstrap-3.3.7-dist/css/my.css" rel="stylesheet">-->
+		<link rel="stylesheet" type="text/css" href="__ROOT__/css/style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	    
+		
+	
+	    <script type="text/javascript" src="__ROOT__/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Public/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+		<link rel="stylesheet" href="__ROOT__/css/upload.css" />
+	</head>
+    <style>
+		body {
+			width: 90%;
+		}
+	</style>
+
+	<body>
+		<br>
+		<form name=theform class="form-horizontal">
+			<div class="form-group form-group-lg">
+				<label for="name" class="col-sm-3 control-label">科　　目：</label>
+				<div class="col-sm-9" style="margin-top: 8px;">
+					<volist name="modulename" id='vi'>
+						<label class="radio-inline">
+						        <input type="radio" checked="checked" name="myradio" id="{$vi.id}" value="{$vi.oss_name}"><span> {$vi.name}</span><span style="display: none;">{$vi.id}</span>
+						    </label>
+					</volist>
+				</div>
+			</div>
+		</form>
+
+		<h4>您所选择的文件列表：</h4>
+		<div id="ossfile">你的浏览器不支持flash,Silverlight或者HTML5！</div>
+
+		<br/>
+        <!--<div class="form-group form-group-lg">
+					<label for="name" class="col-sm-3 control-label">主题介绍：</label>
+					<div class="col-sm-7">
+						<textarea class="form-control" id="filecontext" rows="3"></textarea>
+					</div>
+				</div>-->
+		<div id="container">
+			<a id="selectfiles" href="javascript:void(0);" class='btn'>选择文件</a>
+			<a id="postfiles" href="javascript:void(0);" class='btn'>开始上传</a>
+		</div>
+
+		<pre id="console" style="display: none;"></pre>
+
+		<p>&nbsp;</p>
+
+	</body>
+	<script type="text/javascript" src="__ROOT__/js/lib/plupload-2.1.2/js/plupload.full.min.js"></script>
+	<script type="text/javascript" src="__ROOT__/js/upload.js"></script>
+
+</html>

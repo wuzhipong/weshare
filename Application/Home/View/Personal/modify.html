@@ -1,0 +1,76 @@
+<include file="Public:personalHeader"/>
+				
+				<div class="col-sm-9" style="background: #FFFFFF;height: 800px;">
+					<h3 class="text-left">资料修改</h3>
+					<hr />
+					<div class="container row" style="width: 100%;">
+						<div class="col-sm-2" >
+							<div class="col-sm-12">
+								<a href="#" class="left-content">
+									<img style="border-radius: 30px;height: 60px;width: 60px;margin: 5px;" src="__ROOT__/img/user.png">
+								</a>
+								<h4 class="text-center">{$message.name}</h4>
+								<small style="display:block" class="text-center">2015-5-6</small>
+							</div>							
+						</div>
+						
+						<div class="col-sm-10">
+							<form class="col-sm-8" action="__ROOT__/Home/Personal/subModify" method="post">
+								<div class="form-group">
+								    <label for="address">Username</label>
+								    <input type="text" class="form-control" name="username" placeholder="username">
+								</div>
+								<div class="form-group">
+								    <label for="Password">Old Password</label>
+								    <input type="password" class="form-control" name="Password1" placeholder="Password">
+							    </div>
+							    <div class="form-group">
+								    <label for="Password">New Password</label>
+								    <input type="password" class="form-control" name="Password2" placeholder="Password">
+							    </div>
+							    <div class="form-group">
+								    <label for="sex" class="control-label" >Sex：</label>
+								    <div>
+								    	<label class="radio-inline">
+										  <input type="radio" name="sex" value="0"> 男
+										</label>
+										<label class="radio-inline">
+										  <input type="radio" name="sex" value="1"> 女
+										</label>
+								   </div>				    
+								</div>
+								<div class="form-group">
+								    <label for="address">Email address</label>
+								    <input type="email" class="form-control" name="email" placeholder="Email">
+								</div>
+								<div class="form-group">
+								    <label for="name" class="control-label" >个性签名：</label>
+									<textarea class="form-control" rows="3"></textarea>
+								</div>				
+								<button type="submit" class="btn btn-default">Submit</button>
+							</form>							
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+<include file="Public:personalFooter"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

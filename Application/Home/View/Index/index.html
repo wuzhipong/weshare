@@ -1,0 +1,73 @@
+﻿<include file="Public:header"/>
+		<!--轮播图一-->
+		<div>
+			<div id="myCarousel" class="carousel slide">
+				<ol class="carousel-indicators">
+					<li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+
+				<div class="carousel-inner">
+					<div style="background: #000000;" class="item active">
+						<img alt="第一张" src="__ROOT__/img/1.jpg" />
+					</div>
+					<div style="background: #fee0d5;" class="item">
+						<img alt="第二张" src="__ROOT__/img/2.jpg" />
+					</div>
+					<div style="background: #000000;" class="item">
+						<img alt="第三张" src="__ROOT__/img/3.jpg" />
+					</div>
+				</div>
+				<a href="#myCarousel" data-slide="prev" class="carousel-control left">
+					&lsaquo;
+				</a>
+				<a href="#myCarousel" data-slide="next" class="carousel-control right">
+					&rsaquo;
+				</a>
+			</div>
+		</div>
+
+		<!--newest-->
+		<div class="newest">
+			<div class="row">
+				<div class="col-xs-4 col-md-1 col-sm-1"></div>
+				<div class="announce col-xs-8 col-md-3 col-sm-3">
+					<span>交流群:</span>
+					<strong>672876345</strong>
+				</div>
+				<ul class="col-xs-12 col-sm-8 col-md-8">
+					<li>最近更新：</li>
+					<li>
+						<a href="#"><strong>系统试运营期间，文件无须登录即可下载，欢迎提出建议</strong></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--container-->
+
+		<div class="container tab1">
+			<h2 class="containerHeader">『领略世界，让生活更精彩』</h2>
+			<!--<div class="col-md-3 col-sm-4 col-xs-6">
+				<a href="download.html" class="thumbnail">
+					<img src="__ROOT__/img/shelter4.jpg" />
+					<div class="caption">
+						<h3>视频</h3>
+						<p>我想看看这个世界</p>
+					</div>
+				</a>
+			</div>-->
+			<volist name="moduleList" id="vi">
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<a href="__ROOT__/Home/Download/download?id={$vi.id}" class="thumbnail">
+						<img src="/Uploads/{$vi.savepath}{$vi.savename}"/>
+						
+						<div class="caption">
+							<h3>{$vi.name}</h3>
+							<p>{$vi.message}</p>
+						</div>
+					</a>
+				</div>
+			</volist>
+		</div>
+<include file="Public:footer"/>

@@ -1,0 +1,92 @@
+<include file="Public:header" css="information"/>
+				
+            <!-- Main Content -->
+            <div id="model2" class="container-fluid">
+                <ul class="list-unstyled">
+                	<li>
+						<div class="col-sm-2">
+					      <label class="control-label">服务器IP：</label>
+					    </div>
+					    <div class="col-sm-10">
+					      <label class=""><php>
+					      echo $_SERVER['SERVER_ADDR']
+					      </php></label>
+					    </div>
+					</li>
+					<hr />
+					<li>
+						<div class="col-sm-2">
+					      <label class="control-label">服务器IP：</label>
+					    </div>
+					    <div class="col-sm-10">
+					      <label class=""><php>
+					      echo $_SERVER['SERVER_ADDR']
+					      </php></label>
+					    </div>
+					</li>
+					<hr />
+					<li>
+						<div class="col-sm-2">
+					      <label class="control-label">您的IP：</label>
+					    </div>
+					    <div class="col-sm-10">
+					      <label class=""><php>
+					      	echo getIp();
+					      </php></label>
+					    </div>
+					</li>
+					<hr />
+					<li>
+						<div class="col-sm-2">
+					      <label class="control-label">服务器端口号：</label>
+					    </div>
+					    <div class="col-sm-10">
+					      <label class="">
+					      	<php>echo $_SERVER["SERVER_PORT"];</php></label>
+					    </div>
+					</li>
+					<hr />
+					<li>
+						<div class="col-sm-2">
+					      <label class="control-label">服务器系统：</label>
+					    </div>
+					    <div class="col-sm-10">
+					      <label class="">
+					      	<php>echo PHP_OS;</php>
+					      </label>
+					    </div>
+					</li> 
+					<hr />
+					<li>
+						<div class="col-sm-2">
+					      <label class="control-label">服务器主目录：</label>
+					    </div>
+					    <div class="col-sm-10">
+					      <label class="">
+					      	<php>echo $_SERVER['DOCUMENT_ROOT'];</php>
+					      </label>
+					    </div>
+					</li>
+					<hr />
+					<li>
+						<div class="col-sm-2">
+					      <label class=" control-label">php解释引擎：</label>
+					    </div>
+					    <div class="col-sm-10">
+					      <label class=""><php>echo php_sapi_name();</php></label>
+					    </div>
+					</li>
+					<hr />
+					<li>
+						<div class="col-sm-2">
+					      <label class="control-label">当前时间</label>
+					    </div>
+					    <div class="col-sm-10">
+					      <label class=""><php>echo date("Y-m-d H:i:s");</php></label>
+					      
+					    </div>
+					</li>
+					<hr />
+				</ul>
+            </div>
+<include file="Public:footer"/>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <meta charset="utf-8" />
+	 <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/lib/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/lib/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/lib/css/bootstrap-switch.min.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/lib/css/checkbox3.min.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/lib/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/lib/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/lib/css/select2.min.css">
+    <!-- CSS App -->
+    <link rel="stylesheet" type="text/css" href="__ROOT__/css/adminCss/style.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/css/adminCss/themes/flat-blue.css">
+	<!--某些界面需要的css-->
+	<link rel="stylesheet" type="text/css" href="__ROOT__/css/adminCss/[css].css">
+</head>
+
+<body class="flat-blue">
+    <div class="app-container">
+        <div class="row content-container">
+        	<!--navbar-->
+            <nav class="navbar navbar-default navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-expand-toggle">
+                            <i class="fa fa-bars icon"></i>
+                        </button>
+                        <ol class="breadcrumb navbar-breadcrumb">
+                            <li class="active"><a href="__ROOT__/Home/Index">WEShare</a></li>
+                        </ol>
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-th icon"></i>
+                        </button>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown danger">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-star-half-o"></i> 4</a>
+                            <ul class="dropdown-menu danger  animated fadeInDown">
+                                <li class="title">
+                                    Notification <span class="badge pull-right">4</span>
+                                </li>
+                                <li>
+                                    <ul class="list-group notifications">
+                                        <a href="#">
+                                            <li class="list-group-item">
+                                                <span class="badge">1</span> <i class="fa fa-exclamation-circle icon"></i> new registration
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="list-group-item">
+                                                <span class="badge success">1</span> <i class="fa fa-check icon"></i> new orders
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="list-group-item">
+                                                <span class="badge danger">2</span> <i class="fa fa-comments icon"></i> customers messages
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="list-group-item message">
+                                                view all
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">个人信息 <span class="caret"></span></a>
+                            <ul class="dropdown-menu animated fadeInDown">
+                                <li class="profile-img">
+                                    <img src="__ROOT__/img/head.jpg" class="profile-img">
+                                </li>
+                                <li>
+                                    <div class="profile-info">
+                                        <a href="__ROOT__/Home/Personal/information" class="username">淘淘</a>
+                                        <p>admin@email.com</p>    
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <div class="icon fa fa-paper-plane"></div>
+                                <div class="title"> Admin V.1</div>
+                            </a>
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="__ROOT__/Admin/Index/index">
+                                    <span class="icon fa fa-tachometer"></span><span class="title">Dashboard</span>
+                                </a>
+                            </li>
+							
+                           <li id="systemManage" class="panel panel-default dropdown">
+                                
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-table">
+                                    <span class="icon fa fa-table"></span><span class="title">用户管理</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-table" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="{:U('Admin/User/userList')}">　　 用户列表</a>
+                                            </li>
+                                            <li><a href="{:U('Admin/Index/userModify')}">　　 资料修改</a>
+                                            </li>
+                                            <li><a href="{:U('Admin/Index/addUser')}">　　 添加用户</a>
+                                            </li>
+                                            <li><a href="{:U('Admin/Index/deleteUser')}">　　  删除用户</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+							
+							<li id="manageAdmin" class="panel panel-default dropdown">
+							</li>
+                            
+							<!-- Dropdown-->
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#component-example">
+                                    <span class="icon fa fa-cubes"></span><span class="title">文件操作</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="component-example" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="{:U('Admin/Index/upload')}">　　 上传文件</a>
+                                            </li>
+                                            <li><a href="{:U('Admin/File/fileManage')}">　　 管理文件</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="{:U('Admin/Index/license')}">
+                                    <span class="icon fa fa-thumbs-o-up"></span><span class="title">License</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+			
+
+			
+			
+			

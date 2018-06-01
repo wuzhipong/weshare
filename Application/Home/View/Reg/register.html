@@ -1,0 +1,145 @@
+<include file="Public:header" css="register"/>
+		<!--containner-->
+		<div class="registerContainer">
+			<div class="register">
+				<span>Welcome Register</span>
+				<form class="form-horizontal" onsubmit=" return checkForm()" action="__URL__/adduser" method="post">
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="inputEmail3" class="col-sm-2 control-label">电子邮件：</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="email" name="email" onblur="checkEmail(this)" onchange="checkEmail(this)" placeholder="您的邮箱将作为登陆凭证">
+						</div>
+						<div class="warning" style="display: none;">
+							此邮箱已经被注册
+						</div>
+						<div class="message" style="display: none;">
+							该邮箱可以使用
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="inputEmail3" class="col-sm-2 control-label">用户名：</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="" name="username" placeholder="由1-5个汉字或字母组成">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="inputEmail3" class="col-sm-2 control-label">密		码：</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="password" required="required" class="form-control" id="" name="password" placeholder="Password">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="inputEmail3"  class="col-sm-2 control-label">确认密码：</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="password" required="required" class="form-control" id="" placeholder="Password">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="inputEmail3" class="col-sm-2 control-label">手机号：</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="tel" class="form-control" id="phone" name="phone" onchange="checkphone(this)" onblur="checkphone(this)" placeholder="PhoneNumber">
+						</div>
+						<div class="pwarning" style="display: none;">
+							此手机号已经被注册
+						</div>
+						<div class="pmessage" style="display: none;">
+							该手机号可以使用
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-2">
+							<label for="inputEmail3" class="col-sm-2 control-label">验证码：</label>
+						</div>
+						<div class="col-sm-6">
+							<input type="password" class="form-control" id="" name="typeverify" placeholder="code">
+						</div>
+						<div class="col-sm-4">
+							<!--<input type="password" class="form-control" id="inputPassword3" placeholder="code">-->
+							<img src="__URL__/selfVerify" onclick="this.src=this.src+'?'+Math.random()" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-5 col-sm-2">
+							<button type="submit" style="width: 80px;" id="submit" class="btn btn-primary">注册</button>
+						</div>
+						<div class="col-sm-5">
+							<!--<button type="reset" style="width: 80px;" class="btn btn-default">返回</button>-->
+							<a href="__ROOT__/Home/Index/index" class="btn btn-default">返回</a>
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</body>
+<script>
+	function checkEmail(data){		
+		$.ajax({
+			type:"post",
+			url:"__URL__/checkeamil",
+			async:true,
+			data:{
+				'email':$('#email').val(),
+			},
+			success:function(status){
+				if(status==false){
+					//alert('已经存在的email');
+					$('.message').css('display','none');
+					$('.warning').css('display','block');		
+					$('#submit').attr('disabled','true');
+				}else{
+					//邮箱没有注册
+					$('.warning').css('display','none');
+					$('.message').css('display','block');
+					$('#submit').removeAttr("disabled");
+				}
+			},
+			error:function(){
+				
+			},
+		});
+	}
+	function checkphone(data){
+		//正则表达式验证手机号合法性
+		if(!(/^1[34578]\d{9}$/.test($('#phone').val()))){ 
+			//此处应加样式 使用惰性提醒 并且设置注册按钮不可用
+        alert("手机号码有误，请重填");  
+        return false; 
+       } 
+		$.ajax({
+			type:"post",
+			url:"__URL__/checkphone",
+			async:true,
+			data:{
+				'phone':$('#phone').val(),
+			},
+			success:function(status){
+				console.log(status);
+				if(status==false){
+					//alert('已经存在的电话');
+					$('.pmessage').css('display','none');
+					$('.pwarning').css('display','block');		
+					$('#submit').attr('disabled','true');
+				}else{
+					//电话没有注册
+					$('.pwarning').css('display','none');
+					$('.pmessage').css('display','block');
+					$('#submit').removeAttr("disabled");
+				}
+			},
+		});
+	}
+	
+</script>
+</html>

@@ -1,0 +1,46 @@
+<include file="Public:header" css="upload"/>
+            <!-- Main Content -->
+       	    <div id="model5" style="margin-top:50px" class="container-fluid">
+                <br>
+				<div class="row has-waring">
+					<h3 for="name" class="col-sm-2 text-right control-label">提　　示：</h3>
+					<h3 for="name" class="col-sm-10 control-label">若需要上传多个文件，请一次性勾选     为了提升体验，单个文件不能超过200MB</h3>
+				</div>
+				<form class="row form-horizontal">
+					<div class="form-group form-group-lg">
+						<label for="name" class="col-sm-2 control-label">科　　目：</label>
+						<div class="col-sm-10" style="margin-top: 8px;">
+							<volist name="modulename" id='vi'>
+								<label class="radio-inline">
+										<input type="radio" checked="checked" name="myradio" id="{$vi.id}" value="{$vi.oss_name}"><span> {$vi.name}</span><span style="display: none;">{$vi.id}</span>
+									</label>
+							</volist>
+						</div>
+					</div>
+				</form>
+				
+				<div class="row">
+					<h4 class="col-md-offset-1">您所选择的文件列表：</h4>						
+		            <div id="ossfile" class="ossfile">你的浏览器不支持flash,Silverlight或者HTML5！</div>
+				</div>
+				<br/>
+				<div id="container">
+					<div class="col-md-2"></div>
+					<a id="selectfiles" href="javascript:void(0);" class='btn btn-primary'>选择文件</a>
+					<a id="postfiles" href="javascript:void(0);" class='btn'>开始上传</a>
+				</div>
+				<pre id="console" style="display: none;"></pre>
+				<p>&nbsp;</p>
+					</div>
+				</div>
+				<style>
+					.progress{
+						width: 200px;
+					}
+					.ossfile{
+						margin-left: 200px;
+					}
+				</style>
+<script type="text/javascript" src="__ROOT__/js/lib/plupload-2.1.2/js/plupload.full.min.js"></script>
+<script type="text/javascript" src="__ROOT__/js/upload.js"></script>
+<include file="Public:footer"/>

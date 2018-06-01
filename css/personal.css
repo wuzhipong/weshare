@@ -1,0 +1,25 @@
+.list-group span{
+	text-align: center;
+	display: block;
+	width: 100%;
+	font-size: 30px;
+	padding: 15px;
+}
+
+.list-group a{
+	text-align: center;
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	color: #0059B2;
+}
+
+.list-group a:hover{
+	background: #CCCCCC;
+}
+
+.leftNavagation{
+	height: 730px;
+	background: #EEEEEE;
+	padding: 0;
+}

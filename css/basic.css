@@ -1,0 +1,110 @@
+/*navbar*/
+.swiper-container img{
+    width: 1000px;
+	margin: 0 auto;
+}
+.navbar{
+	margin-bottom: 0;
+}  
+/*轮播图*/
+#myCarousel{
+	margin: 50px 0 0 0;	
+}
+
+.carousel-inner img{
+	width: 800px;
+	margin: 0 auto;
+}
+.carousel-control{
+	font-size: 100px;
+	line-height: 450px;
+}
+/*newest*/
+.newest{
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	padding: 15px 0;
+	float: left;
+	color: #777;
+	font-size: 95%;
+	vertical-align: baseline;
+}
+.announce{
+	float: left;
+	overflow: hidden;
+	height: 20px;
+}
+.announce strong{
+	color: #333333;
+}
+.newest ul{
+	line-height: 16px;
+	max-width: 900px;
+	white-space: nowrap;
+	height: 16px;
+}
+
+.newest li{
+	margin-right: 5px;
+	text-align: center;
+	display: inline;
+}
+/*container*/
+.containerHeader{
+    margin-top: 80px;
+	font-size: 35px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #0059b2;
+	padding: 20px;
+}
+
+/*第一模块*/
+
+.tab1 .media-heading{
+	margin: 5px 0 20px 0;
+}
+
+.tab1 .thumbnail{
+	background: #FFFFFF;
+}
+
+.tab1 .thumbnail .caption h3{
+	text-align: center;
+	color: #333333;
+}
+
+.tab1 .thumbnail .caption p{
+	text-align: center;
+	color: #666666;
+}
+
+
+/*鼠标移到图片放大1.2倍*/
+.tab1 .thumbnail {
+    transition: all 0.5s;
+    cursor: pointer;
+    overflow: hidden;
+}
+.tab1 .thumbnail:hover {
+    transform: scale(1.2);
+    z-index: 10;
+    box-shadow:0px 0px 2px 3px #CCCCCC;
+}
+.tab1 a{
+	text-decoration: none;
+}
+
+/*footer*/
+.footer{
+	height: 100px;
+	margin-top: 0;
+}
+
+.footer p{
+	text-align: center;
+}
+.footer a{
+	font-size: 12px;
+	color: #0059b2;
+}

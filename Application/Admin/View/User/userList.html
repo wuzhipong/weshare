@@ -1,0 +1,48 @@
+<include file="Public:header"/>
+            <!-- Main Content -->
+            <div id="model3" class="container-fluid">
+	                <div class="side-body">
+	                    <div class="row">
+	                        <div class="col-xs-12">
+	                            <div class="card">
+	                                <div class="card-header">
+	                                    <div class="card-title">
+	                                    <div class="title">用户列表</div>
+	                                    </div>
+	                                </div>
+	                                <div class="card-body">
+	                                    <table class="datatable table table-striped" cellspacing="0" width="100%">
+	                                        <thead>
+	                                            <tr>
+	                                                <th>ID</th>
+												    <th>邮箱</th> 	
+												    <th>注册时间</th>
+	                                            </tr>
+	                                        </thead>
+	                                        <tfoot>
+	                                            <tr>
+	                                                <th>ID</th>
+
+												    <th>邮箱</th> 	
+												    <th>注册时间</th>
+	                                            </tr>
+	                                        </tfoot>
+	                                        <tbody>
+	                                        	<!--获取数据库传来的数据-->
+	                                        	<volist name="userlist" id="vv">
+	                                        		<tr>
+	                                        			<td>{$vv.id}</td>
+	                                        			<td>{$vv.username}</td>
+	                                        			<td>{$vv.regtime}</td>
+	                                        		</tr>
+	                                        	</volist>
+	                                        </tbody>
+	                                    </table>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+            </div>
+<include file="Public:footer"/>

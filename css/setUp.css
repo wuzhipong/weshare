@@ -1,0 +1,10 @@
+body{
+	overflow-x:hidden;
+}
+.forms{
+	margin-top: 50px;
+}
+
+.forms label{
+	font-family: "楷体";
+}

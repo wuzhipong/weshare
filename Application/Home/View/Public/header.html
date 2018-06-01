@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+		<title>首页</title>
+		<!--引入jqury-->
+		<script type="text/javascript" src="__ROOT__/js/homeJs/jquery-3.2.1.min.js"></script>
+		<!--引入bootstrap-->
+		<link href="__ROOT__/Public/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="__ROOT__/Public/bootstrap-3.3.7-dist/css/my.css" rel="stylesheet">
+		<script type="text/javascript" src="__ROOT__/Public/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+		<!--获取判断cookie-->
+		<script type="text/javascript" src="__ROOT__/js/homeJs/loginLever.js"></script>
+		
+		<link rel="stylesheet" href="__ROOT__/css/homeCss/basic.css" />
+		<link rel="stylesheet" href="__ROOT__/Public/lib/css/animate.min.css" />
+		<!--获取不同页面单独的css-->
+		<load file="__ROOT__/css/homeCss/[css].css"/>
+	</head>
+
+	<body>
+		<!--navbar导航栏-->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+					<a class="navbar-brand" href="__ROOT__/Home/Index">WEShare</a>
+				</div>	
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="__ROOT__/Home/Index">首页 <span class="sr-only">(current)</span></a>
+						</li>
+						<li>
+							<a href="__ROOT__/Home/Suggest">建议与意见</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="__ROOT__/Admin/index">返回后台</a>
+								</li>
+								<li>
+									<a href="#">敬请期待</a>
+								</li>
+								<li>
+									<a href="#">敬请期待</a>
+								</li>
+								<li role="separator" class="divider"></li>
+								<li>
+									<a href="#">敬请期待</a>
+								</li>
+								<li role="separator" class="divider"></li>
+								<li>
+									<a href="#">敬请期待</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人中心</title>
+		<link href="__ROOT__/Public/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	 	<link href="__ROOT__/Public/bootstrap-3.3.7-dist/css/my.css" rel="stylesheet">
+	 	<link rel="stylesheet" href="__ROOT__/css/personal.css" />
+	 	
+	 	<!--引入jqury-->
+	    <script type="text/javascript" src="__ROOT__/js/jquery-3.2.1.min.js" ></script>
+	    <script type="text/javascript" src="__ROOT__/Public/bootstrap-3.3.7-dist/js/bootstrap.js" ></script>
+	 	<link rel="stylesheet" href="__ROOT__/css/basic.css" />
+		<!--获取判断cookie-->
+		<script type="text/javascript" src="__ROOT__/js/loginLever.js"></script>
+	</head>
+	<body>
+		<!--navbar导航栏-->
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">WEShare</a>
+		    </div>
+		
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class=""><a href="__ROOT__/Home/Index">首页 <span class="sr-only">(current)</span></a></li>
+		        <li><a href="__ROOT__/Home/Suggest">建议与意见</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">One more separated link</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">登录</a></li>
+		        <li><a href="#">注册</a></li>
+		        <li></li>
+		        <li></li>
+				<li><a href="__ROOT__/Home/Index">退出登录</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+		<!--container-->
+		<div style="margin-top:50px;">
+			<!--left-->
+			<div class="col-xs-2 col-md-2 leftNavagation" style="height: 800px;">
+				<div class="list-group">
+					<span>账号管理</span>
+					<ul class="list-unstyled">			
+						<li><a href="#" class="btn-lg">个人信息</a></li>
+						<li><a href="#" class="btn-lg ">修改资料</a></li	
+					</ul>
+				</div>
+			</div>
+			<!--right-->
+			<div>
+				<ul class="list-group list-unstyled">
+					<li class="col-xs-10 col-md-10">
+						<iframe height="800px" scrolling="auto" src="information.html" width="100%" frameborder="0"></iframe>
+					</li>		
+					<li class="col-xs-10 col-md-10" style="display: none;">
+						<iframe height="800px" scrolling="auto" src="modify.html" width="100%" frameborder="0"></iframe>
+					</li>	
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="__ROOT__/js/personal.js" ></script>
+</html>

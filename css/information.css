@@ -1,0 +1,13 @@
+.list-unstyled li{
+	padding: 15px;
+	font-size: 18px;
+	font-family: "楷体";
+}
+
+.control-label{
+	text-align: right;
+	width: 100%;
+}
+.row{
+	height: 500px;
+}

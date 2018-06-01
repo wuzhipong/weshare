@@ -1,0 +1,6 @@
+#oul li{
+	display: none;
+}
+#oul:first-child{
+	display: block;
+}

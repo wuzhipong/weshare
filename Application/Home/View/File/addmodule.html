@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="__ROOT__/js/weshare.js"></script>
+	<script src="../../../js/jquery-3.2.1.min.js"></script>
+
+	<body>
+		<form method="post">
+			<input type="text" name="modulename" />
+			<div class="col-sm-10">
+				<div class="fileupload fileupload-new" data-provides="fileupload">
+					<div class="fileupload-new img-thumbnail">
+						<empty name="shop.file_id"><img src="../../../img/noimage.gif">
+							<else/>
+							<img src="/Uploads/{$shop.savepath}{$shop.savename}">
+						</empty>
+						<input class="form-control" name="file_id" id="file_id" placeholder="" value="{$shop.file_id}" type="hidden">
+
+						<div class="edit_pic_mask except">
+							<input type="button" class="fa fa-plus-circle"  onclick="imageUploader(this,false) "></input>
+							<i class="fa fa-minus-circle " onclick="removeImage(this,false) "></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+
+</html>

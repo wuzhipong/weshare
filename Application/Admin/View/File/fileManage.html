@@ -1,0 +1,57 @@
+<include file="Public:header"/>
+            <!-- Main Content -->
+            <div id="model5" class="container-fluid">
+	                <div class="side-body">
+	                    <div class="row">
+	                        <div class="col-xs-12">
+	                            <div class="card">
+	                                <div class="card-header">
+	                                    <div class="card-title">
+	                                    <div class="title">文件列表</div>
+	                                    </div>
+	                                </div>
+	                                <div class="card-body">
+	                                    <table class="datatable table table-striped" cellspacing="0" width="100%">
+	                                        <thead>
+	                                            <tr>
+	                                                <th>ID</th>
+												    <th>文件名</th>
+												    <th>所属类型</th> 	
+													<th>内容描述</th>
+												    <th>上传时间</th>
+												    <th>操作</th>
+	                                            </tr>
+	                                        </thead>
+	                                        <tfoot>
+	                                            <tr>
+	                                                <th>ID</th>
+												    <th>文件名</th>
+												    <th>所属类型</th> 	
+													<th>内容描述</th>
+												    <th>上传时间</th>
+												    <th>操作</th>
+	                                            </tr>
+	                                        </tfoot>
+	                                        <tbody>
+	                                        	<!--获取数据库传来的数据-->
+	                                        	<volist name="filelist" id="vv">
+	                                        		<tr>
+	                                                <td>{$vv.id}</td>
+	                                                <td>{$vv.filename}</td>
+													<td>{$vv.type}</td>
+	                                                <td>{$vv.message}</td>
+	                                                <td>{$vv.upload_time}</td>
+	                                                <th><a style="cursor: pointer;" href="__URL__/deletefile?id={$vv.id}">删除</a></th>
+	                                            	</tr>    
+	                                        	</volist>
+	                                                                                   
+	                                        </tbody>
+	                                    </table>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+            </div>
+<include file="Public:footer"/>

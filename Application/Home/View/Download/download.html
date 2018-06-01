@@ -1,0 +1,143 @@
+﻿<include file="Public:header" css="download"/>
+		<!--LOGO 小型幕布-->
+		<div class="container-fluid" style="height: 200px; background: #006666; margin-bottom: 3px;">
+             <h1 style="margin: 50px auto;color: #E82323">    提示：只有部分文件支持在线预览，其他文件预览即为下载</h1>
+             
+		</div>
+
+		<!--下载类型导航-->
+		<div class="container">
+			<ul class="nav nav-tabs nav-justified">
+				<volist name="moduleList" id="vi">
+					<!--循环显示已经存在的模块-->
+					<li role="presentation">
+						<a href="__ROOT__/Home/Download/download?id={$vi.id}">{$vi.name}</a>
+					</li>
+				</volist>
+			</ul>
+		</div>
+
+		<!--路径导航  没必要可以删除-->
+		<!--<div class="container">
+			<ol class="breadcrumb">
+			   <span style="color: #666666;">您的位置：</span>
+			   <li><a href="#">首页</a></li>
+			   <li><a href="#">软件系统</a></li>
+			   <li class="active">Data</li>
+			</ol>
+			暂时不需要  wzp
+		</div>-->
+		<!--cotainer-->
+		<div class="container" style="background: #FFFFFF; margin-top:15px">
+			<h3>关于{$modulename}的相关下载</h3>
+			<!--下载列表-->
+
+			<table class="table table-hover">
+				<tbody>
+					<!--表头-->
+					<tr style="border-top: #FFFFFF;">
+						<th>次序</th>
+						<th>文件名</th>
+                                                <th>文件类型</th>
+						<th>文件介绍</th>
+						<th>上传日期</th>
+						<th>详情</th>
+						<th>下载</th>
+					</tr>
+					<!--文件概览 只需要保留第一个剩下的删除  目前只有第一个有进度条 把类选择器hidden删除显示-->
+					<volist name="fileList" id="vi">
+					<!--	<tr>
+							<td>2</td>
+							<td>Mark</td>
+							<td>从前有座灵剑山，阴阳师吴志鹏，李豪发送到发有座灵剑山，阴阳师吴志鹏，李豪发送到发多少范德萨...</td>
+							<td>2015-5-6</td>
+							<td>
+								<a href="#" data-toggle="modal" data-target="#myModal">详情</a>
+							</td>
+							<td>
+								<a href="#">下载</a>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>testname</td>
+							<td>testmessage</td>
+							<td>123</td>
+							<td>
+								<a href="#">下载</a>
+							</td>
+						</tr>-->
+						<tr>
+							<td>{$i}</td>
+							<td>{$vi.filename}</td>
+                                                        <td>{$vi.type}</td>
+							<td>{$vi.message}</td>
+							<td>{$vi.upload_time}</td>
+							<td>
+								<a href="__URL__/previewFile?filename={$vi.filename}&type={$vi.type}&moduleid={$vi.module_id}&fileid={$vi.id}" target="_blank">预览</a>
+							</td>
+							<td>
+								<a href="__URL__/downloadFile?filename={$vi.filename}&type={$vi.type}&moduleid={$vi.module_id}&fileid={$vi.id}" target="_blank">下载</a>
+							</td>
+						</tr>
+					</volist>
+				</tbody>
+			</table>
+
+			<nav aria-label="...">
+				<!--<ul class="pager">
+					<li>
+						<a href="#">上一页</a>
+					</li>
+					<li>
+						<a href="#">下一页</a>
+					</li>
+				</ul>-->
+				<div class="page b-page">{$page}</div>
+			</nav>
+		</div>
+
+		<!-- 模态框 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">XXX</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal">
+							<div class="form-group form-group-sm">
+								<label for="name" class="col-sm-2 control-label">上传时间：</label>
+								<label for="name" style="text-align: left;" class="col-sm-10 control-label">2015-5-6</label>
+							</div>
+
+							<div class="form-group form-group-lg">
+								<label for="name" class="col-sm-2 control-label">主题：</label>
+								<label for="name" style="text-align: left;" class="col-sm-10 control-label">未来科技发展方向</label>
+							</div>
+
+							<div class="form-group form-group-lg">
+								<label for="reply" class="col-sm-2 control-label">详情：</label>
+								<div class="col-sm-8" class="control-label">
+									<p id="detail">
+										<span>
+							      		次旅行是毫无计划可言的，只是恰巧有时间、恰巧有心情，说走就走了，这样的感觉挺好的。我必须承认，对于我这样一个坐公交都会坐反的路痴，独自一人出门是件很危险的事情，容易祸害别人。所幸，我脸皮够厚，走到哪问到哪，不会丢。　
+		　　								好了，言归正传。西塘，如同古时不出闺门的女子，温婉而又优雅。着一身旗袍素装，撑着油纸伞，踏着青石板，从烟雨蒙蒙的古巷中缓缓走来，婀娜多姿。远看是美景近看是美人，让人神魂颠倒、深陷其中不能自拔。
+		　							　    有一句话，叫越了解越深爱，西塘就是这样的一个存在。当你足够了解她，你爱的不仅仅是这里的风景，更爱这里给人的感觉。简单、恬静、带着点点忧伤的凄美，那是一种返璞归真的纯净，叫人情不自禁的想要更爱一点，才不枉她于此苦苦等候
+		　　								参观西塘最好的时节，大概就是这个时候了，清明时节。嫩绿的垂柳、飘香的桃红、还有河畔那开得正盛的樱花，气温正合适，最好煮一杯浊酒、烹一杯清茶，坐于岸边，微风阵阵，好不快哉。再看樱花一瓣瓣落下，沾到了某个妙龄女子的鬓边，那是多么浪漫的时光。
+									</span>
+										<a href="#">>>收缩</a>
+									</p>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Dowmload</button>
+					</div>
+				</div>
+			</div>
+		</div>
+<include file="Public:footer"/>
