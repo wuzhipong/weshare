@@ -12,8 +12,8 @@ class FileController extends Controller{
 	}
 	//上传功能
 	public function upload(){
-	/*	 $accessKeyId = "LTAINu2Fx7NPjRG8"; ;
-         $accessKeySecret = "BtefMe1LF3jgEioXEGYkrGqnk6n6A5";
+	/*	 $accessKeyId = "***"; ;
+         $accessKeySecret = "Bt****6A5";
          $endpoint = "http://oss-cn-beijing.aliyuncs.com";
          $bucket = 'upload-download';
          $object = 'testfile';
