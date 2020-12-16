@@ -47,8 +47,8 @@ class FileController extends Controller{
 		$this->display();
 	}
     public function postphp(){
-    $id= 'LTAINu2Fx7NPjRG8';
-    $key= 'BtefMe1LF3jgEioXEGYkrGqnk6n6A5';
+    $id= 'LT*****G8';
+    $key= '**************5';
     $host = 'upload-download.oss-cn-beijing.aliyuncs.com';
 
     $now = time();
